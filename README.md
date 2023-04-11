@@ -15,8 +15,8 @@
       <li> Verisón en Español e Inglés. </li>
       <li> Icono en la barra de tareas. </li>
       <li> Podrá calcular los hashes para un archivo específico, no solamente carpetas. Además el archivo podrá ser arrastrado hacia la ventana. </li>
-      <li> Solución de error al no seleccionar algoritmos. </li>
-      <li> Solución de error al mostrar ubicación del output (había una barra invertida). </li>
+      <li> <s>Solución de error al no seleccionar algoritmos. </s>
+      <li> <s>Solución de error al mostrar ubicación del output (había una barra invertida).</s> </li>
       <li> Output en XLS. </li>
  </ul>
 </p>
