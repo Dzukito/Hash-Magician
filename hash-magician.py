@@ -19,10 +19,9 @@ import PySimpleGUI as sg
 
 
 
-
-
-
 # Definir el diseño de la interfaz gráfica
+icono="mago.ico"
+sg.set_global_icon(icono)
 layout = [
     [sg.Text('Seleccionar carpeta objetivo:'), sg.Input(key='-FOLDER-', readonly=True), sg.FolderBrowse()],
     [sg.Text('Seleccionar algoritmos hash a utilizar:')],
@@ -32,7 +31,6 @@ layout = [
 ]
 
 # Crear la ventana
-sg.set_global_icon('./mago.ico')
 window = sg.Window('Hash-Magician', layout)
 
 # Loop principal para eventos de la interfaz gráfica
@@ -104,7 +102,7 @@ while True:
             fieldnames.append('sha256')
 
         # Escribir las filas en el archivo CSV solo con los valores correspondientes a los algoritmos seleccionados
-        output_path = os.path.join(folder_path, 'hashes.csv')
+        output_path = os.path.join(folder_path, 'hashes.csv').replace("\\", "/")
         with open(output_path, 'w', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
